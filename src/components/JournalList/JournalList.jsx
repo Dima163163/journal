@@ -1,6 +1,6 @@
 import CardButton from '../CardButton/CardButton';
 import JournalItem from '../JournalItem/JournalItem';
-import './JournalList.css';
+import styles from './JournalList.module.css';
 
 const JournalList = ({items}) => {
 	if (items.length === 0) return <p>Записей пока нет, добавьте первую</p>;
@@ -17,7 +17,7 @@ const JournalList = ({items}) => {
 			<JournalItem title={item.title} text={item.text} date={item.date} />
 		</CardButton>
 	));
-	return <div className="journal-list">{list}</div>;
+	return <div className={styles['journal-list']}>{list}</div>;
 };
 
 export default JournalList;
